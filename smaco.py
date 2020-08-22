@@ -12,28 +12,43 @@ class MainWindow(QtWidgets.QMainWindow):
         self.deactivate.clicked.connect(self.deactivating)
         self.numbercommands.clicked.connect(self.numberofcommands)
         self.loadcommands.clicked.connect(self.commands)
+        self.runeveryid.clicked.connect(self.run)
 
 
-    def enterdata(self,i):
-    	mem[i]=self.loadcommandsid.value()
-    	self.loadcommands.clicked.connect()
+    def run(self):
+        for i in range(number):
+            opc=(mem[i])//(10000)
+            op1 = (mem[i]%10000)//(1000-1)
+            op2 = (mem[i]%1000)
+            print(opc)
+            print(op1)
+            print(op2)
 
 
-    def commands(self,i):
-    	global mem
-    	mem=[0]*10000
-    	for i in range(number):
-    		enterdata(self,i)
-    	self.datashowlabel.setText("data entered for ")
-    	self.datashowlabel.setAlignment(QtCore.Qt.AlignCenter)
+    def commands(self):
+        global mem
+        mem=[0]*number
+        fname=self.loadcommandfileid.text()
+        self.datashowlabel.setText("file name is loaded")
+        self.datashowlabel.setAlignment(QtCore.Qt.AlignCenter)
+        global file
+        try:
+            file=open(fname,'r')
+        except:
+            print("file not found")
+            self.datashowlabel.setText("file name is not loaded")
+            self.datashowlabel.setAlignment(QtCore.Qt.AlignCenter)
+        else:
+            #print("value of file")
+            i=0
+            for each in file:
+                mem[i]=each
+                print(each)
+                i=i+1
 
-    	for i in range(number):
-    		print(mem[i])
+            for i in range(len(mem)):
+                print(mem[i])
 
-
-    def enterdata(self,i):
-    	mem[i]=self.loadcommandsid.value()
-    	self.loadcommands.clicked.connect()
 
 
     def numberofcommands(self):

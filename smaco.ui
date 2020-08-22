@@ -316,6 +316,32 @@ border:2px solid black;</string>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Print the memory content</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QFrame" name="frame_10">
      <property name="geometry">
@@ -340,12 +366,12 @@ border:2px solid black;</string>
        <rect>
         <x>20</x>
         <y>60</y>
-        <width>47</width>
-        <height>13</height>
+        <width>111</width>
+        <height>16</height>
        </rect>
       </property>
       <property name="text">
-       <string>load</string>
+       <string>load enter file name</string>
       </property>
      </widget>
      <widget class="QPushButton" name="loadcommands">
@@ -384,16 +410,6 @@ border:2px solid black;</string>
        </rect>
       </property>
      </widget>
-     <widget class="QSpinBox" name="loadcommandsid">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>90</y>
-        <width>121</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QPushButton" name="numbercommands">
       <property name="geometry">
        <rect>
@@ -407,7 +423,7 @@ border:2px solid black;</string>
        <string>PushButton</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="runeveryid">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -436,46 +452,20 @@ border:2px solid black;</string>
      <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
-        <x>130</x>
+        <x>180</x>
         <y>140</y>
-        <width>47</width>
-        <height>13</height>
+        <width>81</width>
+        <height>16</height>
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_4">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>180</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>PushButton</string>
+       <string>enter amount</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_5">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>180</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>PushButton</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_6">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
+        <x>330</x>
         <y>180</y>
         <width>75</width>
         <height>23</height>
@@ -488,7 +478,7 @@ border:2px solid black;</string>
      <widget class="QLabel" name="label_12">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>350</x>
         <y>140</y>
         <width>47</width>
         <height>13</height>
@@ -498,25 +488,12 @@ border:2px solid black;</string>
        <string>Print data</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_13">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>150</y>
-        <width>81</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Print the memory content</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="datashowlabel">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>100</x>
         <y>20</y>
-        <width>391</width>
+        <width>211</width>
         <height>20</height>
        </rect>
       </property>
@@ -524,14 +501,37 @@ border:2px solid black;</string>
        <string/>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="loadcommandfileid">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>30</y>
+        <y>90</y>
         <width>113</width>
         <height>20</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>180</y>
+        <width>42</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>180</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
       </property>
      </widget>
     </widget>
