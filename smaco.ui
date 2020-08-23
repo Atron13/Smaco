@@ -265,6 +265,19 @@ border:2px solid black;</string>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QFrame" name="frame_7">
      <property name="geometry">
@@ -377,7 +390,7 @@ border:2px solid black;</string>
      <widget class="QPushButton" name="loadcommands">
       <property name="geometry">
        <rect>
-        <x>160</x>
+        <x>140</x>
         <y>90</y>
         <width>75</width>
         <height>23</height>
@@ -413,7 +426,7 @@ border:2px solid black;</string>
      <widget class="QPushButton" name="numbercommands">
       <property name="geometry">
        <rect>
-        <x>370</x>
+        <x>350</x>
         <y>90</y>
         <width>75</width>
         <height>23</height>
@@ -426,7 +439,7 @@ border:2px solid black;</string>
      <widget class="QPushButton" name="runeveryid">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>240</x>
         <y>180</y>
         <width>75</width>
         <height>23</height>
@@ -439,7 +452,7 @@ border:2px solid black;</string>
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>240</x>
         <y>140</y>
         <width>47</width>
         <height>13</height>
@@ -452,14 +465,14 @@ border:2px solid black;</string>
      <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
-        <x>180</x>
+        <x>20</x>
         <y>140</y>
-        <width>81</width>
+        <width>141</width>
         <height>16</height>
        </rect>
       </property>
       <property name="text">
-       <string>enter amount</string>
+       <string>enter input amount file name</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_5">
@@ -488,19 +501,6 @@ border:2px solid black;</string>
        <string>Print data</string>
       </property>
      </widget>
-     <widget class="QLabel" name="datashowlabel">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>20</y>
-        <width>211</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QLineEdit" name="loadcommandfileid">
       <property name="geometry">
        <rect>
@@ -511,20 +511,10 @@ border:2px solid black;</string>
        </rect>
       </property>
      </widget>
-     <widget class="QSpinBox" name="spinBox">
+     <widget class="QPushButton" name="entervalue">
       <property name="geometry">
        <rect>
-        <x>180</x>
-        <y>180</y>
-        <width>42</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton">
-      <property name="geometry">
-       <rect>
-        <x>240</x>
+        <x>140</x>
         <y>180</y>
         <width>75</width>
         <height>23</height>
@@ -534,6 +524,16 @@ border:2px solid black;</string>
        <string>PushButton</string>
       </property>
      </widget>
+     <widget class="QLineEdit" name="entervalueid">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>180</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QFrame" name="frame_11">
      <property name="geometry">
@@ -541,7 +541,7 @@ border:2px solid black;</string>
        <x>20</x>
        <y>100</y>
        <width>451</width>
-       <height>80</height>
+       <height>91</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -559,7 +559,7 @@ border:2px solid black;</string>
         <x>10</x>
         <y>10</y>
         <width>431</width>
-        <height>61</height>
+        <height>71</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -572,17 +572,30 @@ color:white;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="datashowlabel">
        <property name="geometry">
         <rect>
-         <x>20</x>
+         <x>10</x>
          <y>20</y>
-         <width>311</width>
-         <height>16</height>
+         <width>411</width>
+         <height>20</height>
         </rect>
        </property>
        <property name="text">
-        <string>TextLabel</string>
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>401</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </widget>
