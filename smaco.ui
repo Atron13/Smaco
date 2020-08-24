@@ -426,7 +426,7 @@ border:2px solid black;</string>
      <widget class="QPushButton" name="numbercommands">
       <property name="geometry">
        <rect>
-        <x>350</x>
+        <x>360</x>
         <y>90</y>
         <width>75</width>
         <height>23</height>
