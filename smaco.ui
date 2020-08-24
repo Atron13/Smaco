@@ -491,7 +491,7 @@ border:2px solid black;</string>
      <widget class="QLabel" name="label_12">
       <property name="geometry">
        <rect>
-        <x>350</x>
+        <x>330</x>
         <y>140</y>
         <width>47</width>
         <height>13</height>

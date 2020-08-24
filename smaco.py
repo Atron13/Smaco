@@ -45,8 +45,6 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def run(self):
         intr=0
-        #for each in range(len(infile)):
-            #print(infile[each])
         global reg
         reg=[0]*1000
         self.datashowlabel.setText(">>> run segment started in execution")
@@ -54,7 +52,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.label_5.setAlignment(QtCore.Qt.AlignLeft)
         self.datashowlabel.setAlignment(QtCore.Qt.AlignLeft)
         number=self.numbercommndsid.value()
-        #print(number)
         for i in range(number):
             temp=int(mem[i])
             opc=((temp)//(10000))
@@ -62,46 +59,24 @@ class MainWindow(QtWidgets.QMainWindow):
             op1 =((temp)//(1000-1))
             temp=int(mem[i])
             op2 =((temp)%1000)
-            print("value of op1")
-            print(op1)
-            print("value of op2")
-            print(op2)
-            #print("value of i")
-            #print(i)
-            #print(opc)
             if opc == 9:
                 mem[op2]=infile[intr]
-                print("for 9")
-                #print("value1")
-                #print(infile[intr])
                 intr=intr+1
                 
             elif opc== 4:#MOVER
                 reg[op1]=mem[op2]
-                print("for 4")
-                #print("value in reg")
-                #print(reg[op1])
                 
             elif opc== 5:#MOVEM
                 mem[op2]=reg[op1]
-                print("for 5")
-                #print("value in mem")
-                #print(mem[op2])
                 
             elif opc==1:#ADD
                 reg[op1]=reg[op1]+mem[op2]
-                print(reg[op1])
-                print(mem[op2])
-                print("for 1 above")
 
             elif opc== 2:#SUB
                 reg[op1]=reg[op1]-mem[op2]
-                print("for 2")
 
             elif opc==10:#PRINT
                 self.datashowlabel.setText("value is "+mem[op2])
-                print("for 10")
-                print(mem[op2])
 
             elif opc==0:#STOP
                 print("stoped")
@@ -131,16 +106,13 @@ class MainWindow(QtWidgets.QMainWindow):
             self.label_5.setAlignment(QtCore.Qt.AlignLeft)
             self.datashowlabel.setAlignment(QtCore.Qt.AlignLeft)
         else:
-            #print("value of file")
             i=0
             check=0
             for each in file:
                 mem[i]=each
-                #print(each)
                 i=i+1
                 check=check+1
             if check == number:
-                #for i in range(number):
                 print("yes same")
             else:
                 print("number of commands are less than the file commands")
@@ -154,9 +126,6 @@ class MainWindow(QtWidgets.QMainWindow):
     	global number
     	number=self.numbercommndsid.value()
     	self.datashowlabel.setText(">>> number of commands entered")
-        #self.label_5.setText(">>>")
-        #self.label_5.setAlignment(QtCore.Qt.AlignLeft)
-        #self.datashowlabel.setAlignment(QtCore.Qt.AlignLeft)
 
     def activating(self):
     	self.labelforactivate.setText("Activate")
@@ -169,8 +138,6 @@ class MainWindow(QtWidgets.QMainWindow):
     	self.labelforactivate.setText("Deactivate")
     	self.labelforactivate.setStyleSheet("Color:red;")
     	self.labelforactivate.setAlignment(QtCore.Qt.AlignCenter)
-	#def deactivating(self):
-		#self.labelforactivate.setText("Deactivate")
 
 
 
