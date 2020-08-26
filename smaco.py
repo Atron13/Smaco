@@ -38,7 +38,6 @@ class MainWindow(QtWidgets.QMainWindow):
             i=0
             for each in inputfile:
                 infile[i]=each
-                #print(each)
                 i=i+1
         
 
@@ -46,7 +45,9 @@ class MainWindow(QtWidgets.QMainWindow):
     def run(self):
         intr=0
         global reg
-        reg=[0]*1000
+        reg=[0]*4
+        global cond
+        cond=[0,0,0,0,0,1]
         self.datashowlabel.setText(">>> run segment started in execution")
         self.label_5.setText(">>>")
         self.label_5.setAlignment(QtCore.Qt.AlignLeft)
@@ -70,18 +71,41 @@ class MainWindow(QtWidgets.QMainWindow):
                 mem[op2]=reg[op1]
                 
             elif opc==1:#ADD
-                reg[op1]=reg[op1]+mem[op2]
+                reg[op1]=int(reg[op1])+int(mem[op2])
 
             elif opc== 2:#SUB
-                reg[op1]=reg[op1]-mem[op2]
+                reg[op1]=int(reg[op1])-int(mem[op2])
+
+            elif opc==3:
+                reg[op1]=int(reg[op1])*int(mem[op2])
+
+            elif opc==8:
+                reg[op1]=int(reg[op1])//int(mem[op2])
 
             elif opc==10:#PRINT
-                self.datashowlabel.setText("value is "+mem[op2])
+                self.datashowlabel.setText("value is "+str(mem[op2]))
 
             elif opc==0:#STOP
                 print("stoped")
             
-                
+            elif opc==6:
+                if(int(reg[op1]) < int(mem[op2])):
+                    cond[0]=1
+                elif(int(reg[op1]) <= int(mem[op2])):
+                    cond[1]=1
+                elif(int(reg[op1]) == int(mem[op2])):
+                    cond[2]=1
+                elif(int(reg[op1]) > int(mem[op2])):
+                    cond[3]=1
+                elif(int(reg[op1]) >= int(mem[op2])):
+                    cond[4]=1
+                    #t = 1
+
+            elif opc==7: #BC
+                if(cond[op1]==1):
+                    pc = op2-1
+                for i in range(5):#(i=0;i<5;i++)
+                    cond[i]=0;
 
 
 
@@ -131,15 +155,19 @@ class MainWindow(QtWidgets.QMainWindow):
     	self.labelforactivate.setText("Activate")
     	self.labelforactivate.setStyleSheet("Color:limegreen;font-weight:bold")#mediumseagreen green
     	self.labelforactivate.setAlignment(QtCore.Qt.AlignCenter)
-    	self.datashowlabel.setText("System is Activated Enter Number of commands")
-    	self.datashowlabel.setAlignment(QtCore.Qt.AlignCenter)
+    	self.datashowlabel.setText(">>> System is Activated Enter Number of commands")
+    	self.datashowlabel.setAlignment(QtCore.Qt.AlignLeft)
 
     def deactivating(self):
-    	self.labelforactivate.setText("Deactivate")
-    	self.labelforactivate.setStyleSheet("Color:red;")
-    	self.labelforactivate.setAlignment(QtCore.Qt.AlignCenter)
+        self.datashowlabel.setText(">>> System is Deactivated")
+        self.datashowlabel.setAlignment(QtCore.Qt.AlignLeft)
+        self.labelforactivate.setText("Deactivate")
+        self.labelforactivate.setStyleSheet("Color:red;")
+        self.labelforactivate.setAlignment(QtCore.Qt.AlignCenter)
+        
 
-
+#background-color: rgb(221, 51, 20);
+#background-color: rgb(202, 47, 19);
 
 app = QtWidgets.QApplication(sys.argv)
 window = MainWindow()
