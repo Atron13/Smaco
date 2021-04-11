@@ -49,5 +49,5 @@ Simple Instruction Computer (SMACO) is a hypothetical machine with a small but e
 
 ## ScreenShot -
 <p align="center">
-<img src='images/screenshot.png'/>
+<img src='image/screenshot.png'/>
 </p>
