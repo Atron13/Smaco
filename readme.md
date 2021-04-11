@@ -18,7 +18,7 @@ Simple Instruction Computer (SMACO) is a hypothetical machine with a small but e
 	3 Any Code editor
 	
 ## Commands -
-
+	Opcode  Command
 	0	stop
 	1	add
 	2	sub
